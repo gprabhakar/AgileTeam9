@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
 
-  <title>Random Login Form - CodePen</title>
+  <title>SHAS Login Form</title>
 
     <style>
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
@@ -29,7 +29,7 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url(images/theater.jpg);
+	background-image: url(theater.jpg);
 	background-size: cover;
 	-webkit-filter: blur(5px);
 	z-index: 0;
@@ -104,7 +104,7 @@ body{
 	margin-top: 10px;
 }
 
-.login input[type=button]{
+.login input[type=submit]{
 	width: 260px;
 	height: 35px;
 	background: #fff;
@@ -119,11 +119,11 @@ body{
 	margin-top: 10px;
 }
 
-.login input[type=button]:hover{
+.login input[type=submit]:hover{
 	opacity: 0.8;
 }
 
-.login input[type=button]:active{
+.login input[type=submit]:active{
 	opacity: 0.6;
 }
 
@@ -137,7 +137,7 @@ body{
 	border: 1px solid rgba(255,255,255,0.9);
 }
 
-.login input[type=button]:focus{
+.login input[type=submit]:focus{
 	outline: none;
 }
 
@@ -151,11 +151,11 @@ body{
 </style>
 
     <script src="js/prefixfree.min.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="/animate.css">
 </head>
 
 <body>
-
+<form name="LoginCheck" action="LoginCheck.jsp" method="post">
   <div class="body"></div>
 		<div class="grad"></div>
 		<div class="header">
@@ -163,13 +163,26 @@ body{
 		</div>
 		<br> 
 		<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
+				<input type="text" placeholder="username" name="username"><br>
 				<input type="password" placeholder="password" name="password"><br>
-				<input type="button" value="Login">
+				<input type="submit" id="submit" value="Submit" onClick = "errorCheck();">
 		</div>
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-
+  <script>
+  	function errorCheck(){
+  		
+  		if(session.getParameter(error) == "true")
+  			{
+  				document.getElementById("submit").addClass("animate shake");
+  				window.setTimeout("", 2000);
+  			}
+  	}
+  	function removeCss(){
+  		document.getElementById("submit").removeClass("animate shake");
+  	}
+  </script>
+</form>
 </body>
 
 </html>
