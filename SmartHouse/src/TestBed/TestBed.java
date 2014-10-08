@@ -2,8 +2,6 @@ package TestBed;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-
 import Appliance.SecurityAlarm;
 import Appliance.SprinklerSystem;
 import SmartHouse.SmartHouse;
@@ -22,13 +20,13 @@ public class TestBed
 	
 	public void StartTest()
 	{
-		TestBed test = new TestBed();
+		/*TestBed test = new TestBed();
 		test.init();
-		/*Calendar time = Calendar.getInstance();
+		Calendar time = Calendar.getInstance();
 		test.setStartDate(time);
 		time.add(Calendar.HOUR, 2);
-		test.setEndDate(time);*/
-		test.run();
+		test.setEndDate(time);
+		test.run();*/
 		
 	}
 	public TestBed()

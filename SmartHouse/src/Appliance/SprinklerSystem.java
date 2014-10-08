@@ -11,7 +11,7 @@ import Interfaces.WaterConsumer;
 public class SprinklerSystem implements CheckState
 {
 	double rate;
-	Map<String, SprinklerZone> zones;
+	Map<String, SprinklerZone> zones = new HashMap<String, SprinklerZone>();
 	public SprinklerSystem() 
 	{
 		rate = 4;

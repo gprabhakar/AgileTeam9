@@ -54,7 +54,8 @@ public class TestBedServlet extends HttpServlet {
 			e.setTime(end);
 			testBed.setStartDate(s);
 			testBed.setEndDate(e);
-			testBed.StartTest();
+			testBed.init();
+			testBed.run();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
