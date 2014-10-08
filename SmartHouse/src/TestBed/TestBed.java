@@ -2,6 +2,7 @@ package TestBed;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import Appliance.SecurityAlarm;
 import Appliance.SprinklerSystem;
@@ -19,14 +20,14 @@ public class TestBed
 	long delay; //delay in milliseconds
 	int interval; //time interval in minutes 
 	
-	public static void main(String[] args)
+	public void StartTest()
 	{
 		TestBed test = new TestBed();
 		test.init();
-		Calendar time = Calendar.getInstance();
+		/*Calendar time = Calendar.getInstance();
 		test.setStartDate(time);
 		time.add(Calendar.HOUR, 2);
-		test.setEndDate(time);
+		test.setEndDate(time);*/
 		test.run();
 		
 	}
@@ -67,7 +68,7 @@ public class TestBed
 		Calendar current = startDate;
 		System.out.println(sdf.format(current.getTime()));
 		System.out.println(sdf.format(endDate.getTime()));
-
+		
 		while(endDate.getTimeInMillis() > current.getTimeInMillis())
 		{	
 			house.checkState(current);
