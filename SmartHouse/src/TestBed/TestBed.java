@@ -37,14 +37,12 @@ public class TestBed
 	}
 	public void setStartDate(Calendar start)
 	{
-		System.out.println(sdf.format(start.getTime()));
 		startDate = (Calendar)start.clone();
 	}
 	public boolean setEndDate(Calendar end)
 	{
 		if(end.getTimeInMillis() - startDate.getTimeInMillis() > 0)
 		{
-			System.out.println(sdf.format(end.getTime()));
 			endDate = (Calendar)end.clone();
 			return true;
 		}	
@@ -64,8 +62,6 @@ public class TestBed
 	public void run()
 	{
 		Calendar current = startDate;
-		System.out.println(sdf.format(current.getTime()));
-		System.out.println(sdf.format(endDate.getTime()));
 		
 		while(endDate.getTimeInMillis() > current.getTimeInMillis())
 		{	
