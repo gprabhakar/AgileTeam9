@@ -15,6 +15,7 @@ public class SprinklerSystem implements CheckState
 	public SprinklerSystem() 
 	{
 		rate = 4;
+		zones = new HashMap<String, SprinklerSystem.SprinklerZone>();
 	}
 	public boolean addZone(String name)
 	{
@@ -71,7 +72,7 @@ public class SprinklerSystem implements CheckState
 	{
 		zones.get(zone).addSprinkler(name);
 	}
-	public void addZoneTime(String zone, Calendar strat, Calendar end)
+	public void addZoneTime(String zone, Calendar start, Calendar end)
 	{
 		
 	}
