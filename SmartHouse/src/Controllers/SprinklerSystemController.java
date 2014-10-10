@@ -1,5 +1,6 @@
 package Controllers;
 
-public class SprinklerSystemController {
+public class SprinklerSystemController 
+{
 
 }

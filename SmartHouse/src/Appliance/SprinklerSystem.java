@@ -74,7 +74,8 @@ public class SprinklerSystem implements CheckState
 	}
 	public void addZoneTime(String zone, Calendar start, Calendar end)
 	{
-		
+		SprinklerZone zone1 = zones.get(zone);
+		zone1.addZoneSetting(start, end);
 	}
 	@Override
 	public boolean isCheckState() 
@@ -93,6 +94,7 @@ public class SprinklerSystem implements CheckState
 		ArrayList<Sprinkler> sprinklers;
 		boolean on;
 		Map<Calendar,Calendar> zoneTimes;
+		String description;
 		public SprinklerZone()
 		{
 			on=false;
@@ -106,6 +108,14 @@ public class SprinklerSystem implements CheckState
 		public void setActive(boolean active)
 		{
 			on = active;
+		}
+		public void setDescription(String des)
+		{
+			description = des;
+		}
+		public String getDescription()
+		{
+			return description;
 		}
 		public ArrayList<Sprinkler> getSrpinklers()
 		{
