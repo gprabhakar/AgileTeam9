@@ -2,8 +2,10 @@ package TestBed;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
 import Appliance.SecurityAlarm;
 import Appliance.SprinklerSystem;
+import Controllers.SprinklerSystemController;
 import SmartHouse.SmartHouse;
 
 public class TestBed 
@@ -54,9 +56,24 @@ public class TestBed
 		SecurityAlarm alarm = new SecurityAlarm();
 		house.addConsumer(alarm);
 		house.addStateAppliance(alarm);
-		SprinklerSystem sprinkler= new SprinklerSystem();
-		sprinkler.addZone("Zone 1");
-		sprinkler.addZone("Zone 2");
+		
+		SprinklerSystemController sprinklers = new SprinklerSystemController();
+		sprinklers.initiateSprinklerSystem();
+		sprinklers.addSprinklerZone("Zone1");
+		sprinklers.addSprinkler("Zone1", "Sprinkler1");
+		sprinklers.addSprinkler("Zone1", "Sprinkler2");
+		sprinklers.addSprinkler("Zone1", "Sprinkler3");
+		
+		sprinklers.addSprinklerZone("Zone2");
+		sprinklers.addSprinkler("Zone2", "Sprinkler1");
+		sprinklers.addSprinkler("Zone2", "Sprinkler2");
+		sprinklers.addSprinkler("Zone2", "Sprinkler3");
+		
+		Calendar start = Calendar.getInstance();
+		Calendar end = (Calendar) start.clone();
+		end.add(Calendar.HOUR,2);
+		boolean[] weekdays = {false,true,true,true,true,true,false};
+		sprinklers.addZoneTime("Zone1", start, end, weekdays);
 		
 	}
 	public void run()
