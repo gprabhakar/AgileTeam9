@@ -5,7 +5,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import Interfaces.CheckState;
 import Interfaces.WaterConsumer;
@@ -21,10 +20,15 @@ public class SprinklerSystem implements CheckState
 	}
 	public boolean addZone(String name)
 	{
-		if(zones.put(name, new SprinklerZone())!=null)
+		if(zones.size() <= 8 )
+		{	
+			if(zones.put(name, new SprinklerZone())!=null)
 				return true;
-		else
-			return false;
+			else
+				return false;
+		}
+		
+		return false;
 	}
 	public boolean removeZone(String name)
 	{
@@ -76,6 +80,10 @@ public class SprinklerSystem implements CheckState
 	public boolean addSprinkler(String zone, String name)
 	{
 		return zones.get(zone).addSprinkler(name);
+	}
+	public boolean removeSprinkler(String zone, String name)
+	{
+		return zones.get(zone).removeSprinkler(name);
 	}
 	public void addZoneTime(String zone, Calendar start, Calendar end)
 	{
@@ -287,4 +295,5 @@ public class SprinklerSystem implements CheckState
 			
 		}
 	}
+
 }
