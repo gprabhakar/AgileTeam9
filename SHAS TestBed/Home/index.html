@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue 1.0 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SHAS</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<style>
+				input.switch:empty
+{
+	margin-left: -999px;
+}
+
+input.switch:empty ~ label
+{
+	position: relative;
+	float: left;
+	line-height: 1.6em;
+	text-indent: 4em;
+	margin: 0.2em 0;
+	cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.switch:empty ~ label:before, 
+input.switch:empty ~ label:after
+{
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+	width: 3.6em;
+	background-color: #c33;
+	border-radius: 0.3em;
+	box-shadow: inset 0 0.2em 0 rgba(0,0,0,0.3);
+	-webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+input.switch:empty ~ label:after
+{
+	width: 1.4em;
+	top: 0.1em;
+	bottom: 0.1em;
+	margin-left: 0.1em;
+	background-color: #fff;
+	border-radius: 0.15em;
+	box-shadow: inset 0 -0.2em 0 rgba(0,0,0,0.2);
+}
+
+input.switch:checked ~ label:before
+{
+	background-color: #393;
+}
+
+input.switch:checked ~ label:after
+{
+	margin-left: 2.1em;
+}
+		</style>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-panels-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<!--<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>-->
+							<h1 id="title">Smart House Automation System</h1>
+							
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="icon icon-home">Home</span></a></li>
+								<li><a href="#Sprinklers" id="Sprinklers-link" class="skel-panels-ignoreHref"><span class="icon icon-th">Sprinklers</span></a></li>
+								<li><a href="#Alarms" id="Alarms-link" class="skel-panels-ignoreHref"><span class="icon icon-user">Security Alarms</span></a></li>
+								<li><a href="#Thermostat" id="Thermostat-link" class="skel-panels-ignoreHref"><span class="icon icon-envelope">Thermostat</span></a></li>
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<!--<div class="bottom">
+
+					Social Icons 
+						<ul class="icons">
+							<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+							<li><a href="#" class="icon icon-facebook"><span>Facebook</span></a></li>
+							<li><a href="#" class="icon icon-github"><span>Github</span></a></li>
+							<li><a href="#" class="icon icon-dribbble"><span>Dribbble</span></a></li>
+							<li><a href="#" class="icon icon-envelope"><span>Email</span></a></li>
+						</ul>
+				
+				</div>-->
+			
+			</div>
+
+			        
+			
+		<!-- Main -->
+			<div id="main">
+			
+				<!-- Intro -->
+					<section id="top" class="one">
+						<div class="container">
+							<div class="content" style = "background-image: url(images/pic01.jpg);">
+								<ul class="ca-menu">
+									<li>
+										<a href="#Sprinklers" id="Sprinklers-link" class="skel-panels-ignoreHref">
+											<span class="ca-icon">&#51</span>
+											<div class="ca-content">
+												<h2 class="ca-main">Sprinklers</h2>
+												<h3 class="ca-sub">Control your sprinklers</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#Alarms" id="Alarms-link" class="skel-panels-ignoreHref">
+											<span class="ca-icon">&#119</span>
+											<div class="ca-content">
+												<h2 class="ca-main">Security Alarms</h2>
+												<h3 class="ca-sub">Security alarm controls</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#Thermostat" id="Thermostat-link" class="skel-panels-ignoreHref">
+											<span class="ca-icon">&#83</span>
+											<div class="ca-content">
+												<h2 class="ca-main">Thermostat</h2>
+												<h3 class="ca-sub">Therostat controls</h3>
+											</div>
+										</a>
+									</li>
+									<!--<li>
+										<a href="#">
+											<span class="ca-icon">K</span>
+											<div class="ca-content">
+												<h2 class="ca-main">Sophisticated Team</h2>
+												<h3 class="ca-sub">Professionals in action</h3>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="ca-icon">L</span>
+											<div class="ca-content">
+												<h2 class="ca-main">Unconditional Support</h2>
+												<h3 class="ca-sub">24/7 for you needs</h3>
+											</div>
+										</a>
+									</li>-->
+								</ul>
+							</div><!-- content -->
+        
+							<!--<img src="images/pic01.jpg" alt="" />-->
+							<br/>
+							
+							
+
+						</div>
+					</section>
+					
+				<!-- Sprinklers -->
+					<section id="Sprinklers" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Sprinklers</h2>
+							</header>
+							<div class="row">
+								<div class="4u">
+									<article class="item">
+										
+										<center>
+										<div style = "">
+											<input type="checkbox" id="switch1" name="switch1" class="switch" />
+											<label for="switch1">Turn Sprinklers ON/OFF</label>
+										</div><br/>
+										</center>
+									</article>
+									
+								</div>
+								<article class="item">
+										
+									
+								</article>
+							</div>
+							
+
+						</div>
+					</section>
+
+				<!-- Alarms Me -->
+					<section id="Alarms" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Alarms</h2>
+							</header>
+
+						</div>
+					</section>
+			
+				<!-- Thermostat -->
+					<section id="Thermostat" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Thermostat</h2>
+							</header>
+
+							
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
+									<div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<a href="#" class="button submit">Send Message</a>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<div class="copyright">
+						<p></p>
+						<ul class="menu">
+							
+						</ul>
+					</div>
+				
+			</div>
+		 
+	</body>
+</html>
